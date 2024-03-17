@@ -4,8 +4,6 @@ FROM node:16 AS build
 WORKDIR app
 
 COPY . .
-ADD /strava-series-env/global-config.service.ts src/global-config.service.ts
-ADD /strava-series-env/proxy.conf.json src/proxy.conf.json
 
 RUN npm install
 RUN npm run build
