@@ -1,0 +1,18 @@
+services:
+  front:
+    build: ./frontendstravaintegration/
+    ports:
+      - "443:443"
+    volumes:
+      - /etc/apache2/conf-available/strava-series-httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - /etc/letsencrypt/live/strava-series.flandrecorentin.com/fullchain.pem:/usr/local/apache2/conf/server.crt
+      - /etc/letsencrypt/live/strava-series.flandrecorentin.com/privkey.pem:/usr/local/apache2/conf/server.key
+    environment:
+      ENV_CONFIG: "production"
+  api:
+    build: ./backendstravaintegration/
+    ports:
+      - "8000:8000"
+    environment:
+      ENV_CONFIG: "production"
+      DEBUG: "True"

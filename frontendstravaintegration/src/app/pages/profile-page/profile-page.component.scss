@@ -1,0 +1,55 @@
+#div-series, #div-strava {
+}
+
+img {
+  border-radius: 10px;
+  border: 2px var(--main-color-5) solid;
+  box-shadow: 5px 4px 2px var(--main-color-5);
+  display: block;
+}
+
+.square-box {
+  flex: 1;
+  min-height: 200px;
+  min-width: 150px;
+  max-height: 400px;
+  max-width: 300px;
+}
+
+.square-box-3half {
+  flex: 1;
+  min-height: 200px;
+  min-width: 150px;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.square-box-half {
+  flex: 0.1;
+  min-height: 75px;
+  min-width: 75px;
+  max-height: 200px;
+  max-width: 75px;
+  @media (max-width: 700px) {
+    min-width: (50px);
+  }
+}
+
+#bio {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  @media (max-width: 700px) {
+    font-size: (0.65rem);
+  }
+}
+
+#location {
+  font-size: 0.7rem;
+  @media (max-width: 700px) {
+    font-size: (0.55rem);
+  }
+}
+
+//#strava-activity{
+//  padding-bottom: 10px;
+//}

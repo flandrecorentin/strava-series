@@ -1,0 +1,6 @@
+<div class="page">
+  <p *ngIf="!state.error">{{messageSuccess[internalService.getLanguage()]}}
+    : {{state.message[internalService.getLanguage()]}}</p>
+  <p *ngIf="state.error">{{messageFailed[internalService.getLanguage()]}}
+    : {{state.message[internalService.getLanguage()]}}</p>
+</div>

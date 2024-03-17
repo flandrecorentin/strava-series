@@ -1,0 +1,28 @@
+<form [formGroup]="serieForm" (ngSubmit)="onSubmit()">
+
+  <div>
+<!--    <label for="name_input">{{['Name', 'Nom'][internalService.getLanguage()]}}</label>-->
+    <input [placeholder]="['Name', 'Nom'][internalService.getLanguage()]" id="name_input" type="text" formControlName="name">
+    <p class="error-font" *ngIf="errorsSerieForm.name_max_length.state">{{errorsSerieForm.name_max_length.warning[internalService.getLanguage()]}}</p>
+    <p class="error-font" *ngIf="errorsSerieForm.name_required.state">{{errorsSerieForm.name_required.warning[internalService.getLanguage()]}}</p>
+<!--    <app-error-form [display]="errorsSerieForm.name_required.state" [name]="errorsSerieForm.name_required.warning"></app-error-form>-->
+  </div>
+
+  <div >
+<!--    <label for="bio_input">{{['Bio', 'Bio'][internalService.getLanguage()]}}</label>-->
+    <textarea [placeholder]="['Bio', 'Bio'][internalService.getLanguage()]" id="bio_input" type="text" formControlName="bio"></textarea>
+    <p class="error-font" *ngIf="errorsSerieForm.bio_max_length.state">{{errorsSerieForm.bio_max_length.warning[internalService.getLanguage()]}}</p>
+  </div>
+
+  <div id="div-radios">
+    <label class="label-radio border-custom-1" [id]="seriesType" *ngFor="let seriesType of seriesTypes; let i = index">
+      <input class="input-radio" (click)="updateType(seriesType)" type="radio" formControlName="type" [value]="seriesType">{{translationsSeriesTypes[i][internalService.getLanguage()]}}
+    </label>
+  </div>
+
+<!--  <div style="margin-top:100px">-->
+<!--    <p>Form Value: {{ serieForm.value}}</p>-->
+<!--    <p>Form Status: {{ serieForm.status }}</p>-->
+<!--  </div>-->
+  <button class="border-custom-1" type="submit" [disabled]="!serieForm.valid">{{['Create Serie', 'Créer série'][internalService.getLanguage()]}}</button>
+</form>

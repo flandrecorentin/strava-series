@@ -1,0 +1,51 @@
+# VS Code - IntelliJ
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.idea/*
+
+# Local History for Visual Studio Code - IntelliJ
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+*__pycache__*
+*.pyc
+
+# Corentin's local files
+local-assets/
+local-documentation/
+
+# Frontend files
+frontendstravaintegration/.angular/cache
+frontendstravaintegration/.editorconfig
+frontendstravaintegration/.history/*
+frontendstravaintegration/.idea/
+frontendstravaintegration/.vscode/*
+frontendstravaintegration/!.vscode/settings.json
+frontendstravaintegration/!.vscode/tasks.json
+frontendstravaintegration/!.vscode/launch.json
+frontendstravaintegration/!.vscode/extensions.json
+frontendstravaintegration/dist
+frontendstravaintegration/frontendstravaintegration.iml
+frontendstravaintegration/node_modules
+frontendstravaintegration/src/global-config.service.ts
+
+# Backend files
+backendstravaintegration/.history/*
+backendstravaintegration/.vscode/*
+backendstravaintegration/.idea/
+backendstravaintegration/!.vscode/settings.json
+backendstravaintegration/!.vscode/tasks.json
+backendstravaintegration/!.vscode/launch.json
+backendstravaintegration/!.vscode/extensions.json
+backendstravaintegration/backendstrava/devdata.py
+backendstravaintegration/backendstrava/secret_config.py
+backendstravaintegration/backendstravaintegration.iml
+backendstravaintegration/backendstravaintegration/secret_config_settings.py
+backendstravaintegration/db.sqlite3
+backendstravaintegration/queries/
+backendstravaintegration/venv/*

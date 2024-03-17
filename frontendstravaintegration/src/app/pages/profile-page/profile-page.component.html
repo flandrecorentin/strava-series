@@ -1,0 +1,40 @@
+<div class="page">
+  <div id="div-series">
+    <h2 class="break-line-double">{{subTitleSeries[internalService.getLanguage()]}}</h2>
+  </div>
+  <div id="div-strava">
+    <h2 class="break-line-double">{{subTitleStrava[internalService.getLanguage()]}}</h2>
+    <!--    <h3>{{subTitleStrava[internalService.getLanguage()]}}</h3>-->
+    <div *ngIf="profile!=undefined" class="container-flex-center min-margin-left-right">
+      <div class="square-box container-flex-center align-items-center bg-custom-style-2">
+        <img [src]="profile.profileStrava.picture" alt="Picture {{profile.profileStrava.username}}" width="124"
+             height="124">
+      </div>
+      <div class="square-box small-padding">
+        <h3 class="bg2">{{profile.profileStrava.firstname}} {{profile.profileStrava.lastname}}</h3>
+        <p *ngIf="profile.profileStrava.username!=null" class="break-line">aaaa{{profile.profileStrava.username}}</p>
+        <p class="bg2" id="bio">{{profile.profileStrava.bio}}</p>
+        <p id="location" class="break-line bg2">{{profile.profileStrava.city}} - {{profile.profileStrava.state}}
+          , {{profile.profileStrava.country}}</p>
+      </div>
+    </div>
+    <div *ngIf="profile!=undefined" id="strava-activity" class="container-flex-center min-margin-left-right">
+      <div (click)="handleIncrementStravaActivity(-1) "
+           class="pointer square-box-half container-flex-center align-items-center shadow border-radius-left">
+        <
+      </div>
+      <div class="square-box-3half shadow">
+        <h3>{{profile.activitiesStrava[indexActivity].name}}</h3>
+        <p>{{profile.activitiesStrava[indexActivity].distance}}</p>
+        <p>{{profile.activitiesStrava[indexActivity].startDate}}</p>
+        <p>{{profile.activitiesStrava[indexActivity].sportType}}</p>
+        <p>{{profile.activitiesStrava[indexActivity].movingTime}}</p>
+      </div>
+      <div (click)="handleIncrementStravaActivity(+1) "
+           class="pointer square-box-half container-flex-center align-items-center shadow border-radius-right">
+        >
+      </div>
+    </div>
+  </div>
+</div>
+

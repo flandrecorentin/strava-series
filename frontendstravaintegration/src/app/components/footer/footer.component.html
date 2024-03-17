@@ -1,0 +1,28 @@
+<div>
+  <div id="footer" class="flex">
+    <div>
+      <div class="section">{{sectionApp[internalService.getLanguage()]}}</div>
+      <app-button [text]="about.title[internalService.getLanguage()]" [class]="classButtonFooter"
+                  [redirectionUrl]="about.redirectionUrl"></app-button>
+      <app-button [text]="contact.title[internalService.getLanguage()]" [class]="classButtonFooter"
+                  [redirectionUrl]="contact.redirectionUrl"></app-button>
+    </div>
+    <div>
+      <div class="section">{{sectionRights[internalService.getLanguage()]}}</div>
+      <app-button [text]="deconnection.title[internalService.getLanguage()]" [class]="classButtonFooter"
+                  [redirectionUrl]="deconnection.redirectionUrl"></app-button>
+      <app-button [text]="revoke.title[internalService.getLanguage()]" [class]="classButtonFooter"
+                  [redirectionUrl]="revoke.redirectionUrl"></app-button>
+    </div>
+    <div>
+      <div class="section">{{sectionCode[internalService.getLanguage()]}}</div>
+      <app-button [type]="code.type" [text]="code.title[internalService.getLanguage()]" [class]="classButtonFooter"
+                  [redirectionUrl]="code.redirectionUrl"></app-button>
+      <app-button [type]="strava.type" [text]="strava.title[internalService.getLanguage()]" [class]="classButtonFooter"
+                  [redirectionUrl]="strava.redirectionUrl"></app-button>
+    </div>
+  </div>
+  <p id="version">{{version}}</p>
+</div>
+
+

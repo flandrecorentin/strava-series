@@ -1,0 +1,203 @@
+/* You can add global styles to this file, and also import other style files */
+
+/******************* FONT & USAGE-FONT ************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Subrayada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Montserrat+Subrayada:wght@700&display=swap');
+//  font-family: 'Montserrat', sans-serif;
+//  font-family: 'Montserrat Subrayada', sans-serif;
+
+/******************* DEFAULT STYLE ************************/
+// Default 0 padding and margin
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Geologica', sans-serif;
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #f9f8f5;
+  background-image: radial-gradient(rgba(255, 127, 46, 0.2) 3px, transparent 1px), radial-gradient(rgba(255, 127, 46, 0.2) 2px, rgba(249, 248, 245, 0.2) 1px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
+  padding: 15px 5px;
+}
+
+.flex {
+  display: flex;
+}
+
+.border-5px-color3 {
+  border: 5px solid var(--main-color-3);
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container-flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.debug {
+  border: 3px solid red;
+}
+
+.min-margin-left-right {
+  margin: 0 0px;
+}
+
+.small-padding {
+  padding: 15px;
+  @media (max-width: 700px) {
+    padding: 7.5px;
+  }
+}
+
+.break-line {
+  padding-left: 25px;
+  @media (max-width: 700px) {
+    padding-left: 10px;
+  }
+}
+
+.break-line-double {
+  padding-left: 50px;
+  @media (max-width: 700px) {
+    padding-left: 20px;
+  }
+}
+
+.shadow {
+  background-color: var(--black-light);
+}
+
+.border-radius-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.border-radius-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/******************* COLOR ************************/
+:root {
+  --main-color-1: #ff7f2e;
+  --main-color-2: #f9f8f5;
+  --main-color-3: #5d7f9b;
+  --main-color-4: #deaa45;
+  --main-color-5: #276268;
+  --main-color-6: #c1c054;
+  --main-color-7: #a89d8b;
+
+
+  --black: black;
+  --black-light: rgba(0, 0, 0, 0.1);
+  --white: white;
+
+  --error-color: rgb(178, 49, 49)
+}
+
+.bg1 {
+  background-color: var(--main-color-1)
+}
+
+.bg2 {
+  background-color: var(--main-color-2)
+}
+
+.bg3 {
+  background-color: var(--main-color-3)
+}
+
+.bg4 {
+  background-color: var(--main-color-4)
+}
+
+.bg5 {
+  background-color: var(--main-color-5)
+}
+
+.bg6 {
+  background-color: var(--main-color-6)
+}
+
+.bg-custom-style-1 {
+  background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%),
+  linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%),
+  linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
+  radial-gradient(gray 2px, transparent 0);
+  background-size: 50px 50px, 50px 50px;
+}
+
+.bg-custom-style-2 {
+  background-color: #f9f8f5;
+  background-image: linear-gradient(#276268 1px, transparent 1px), linear-gradient(to right, #276268 1px, #f9f8f5 1px);
+  background-size: 20px 20px;
+}
+
+.bg-custom-style-3 {
+  background-color: #f9f8f5;
+  //opacity: 0.8;
+  background-image: linear-gradient(135deg, #deaa45 25%, transparent 25%), linear-gradient(225deg, #deaa45 25%, transparent 25%), linear-gradient(45deg, #deaa45 25%, transparent 25%), linear-gradient(315deg, #deaa45 25%, #f9f8f5 25%);
+  background-position: 29px 0, 29px 0, 0 0, 0 0;
+  background-size: 58px 58px;
+  background-repeat: repeat;
+  border-radius: 15px;
+}
+.border-custom-1{
+  background-color: var(--main-color-1);
+  box-shadow: 4px 3px 0px var(--main-color-3),
+  3px 4px 0px var(--main-color-3),
+  4px 4px 0px var(--main-color-3),
+  2px 6px 0px var(--black),
+  6px 2px 0px var(--black),
+  6px 6px 0px var(--black);
+}
+.border-custom-1:disabled{
+  background-color: var(--main-color-2);
+  box-shadow: 4px 3px 0px var(--black-light),
+  3px 4px 0px var(--black-light),
+  4px 4px 0px var(--black-light),
+  2px 6px 0px var(--black-light),
+  6px 2px 0px var(--black-light),
+  6px 6px 0px var(--black-light);
+}
+.border-custom-1:not([disabled]):hover{
+  background-color: var(--main-color-3);
+  box-shadow: 4px 3px 0px var(--main-color-1),
+  3px 4px 0px var(--main-color-1),
+  4px 4px 0px var(--main-color-1),
+  2px 6px 0px var(--black),
+  6px 2px 0px var(--black),
+  6px 6px 0px var(--black);
+}
+
+/******************* ERROR ************************/
+.error-font{
+  font-size: 0.8rem;
+  color: var(--error-color);
+  margin-top: -8px;
+}
+
+/******************* GLOBAL RESPONSIVE LESS 700px ************************/
+@media (max-width: 700px) {
+}

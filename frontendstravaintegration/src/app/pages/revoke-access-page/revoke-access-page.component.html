@@ -1,0 +1,9 @@
+<div class="page">
+  <h2>{{titlePage[internalService.getLanguage()]}}</h2>
+  <p>{{instruction[internalService.getLanguage()]}}</p>
+  <p>{{targetValueRevoke[internalService.getLanguage()]}}</p>
+  <input [placeholder]="targetValueRevoke[internalService.getLanguage()]" [(ngModel)]="inputValueRevoke"
+         (input)="checkInputValue()">
+  <a target="_blank" href="https://www.strava.com/settings/apps" (click)="revokeAccess()"
+     [class]="classRevokeLink">{{textLink[internalService.getLanguage()]}}</a>
+</div>

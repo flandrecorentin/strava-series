@@ -1,0 +1,16 @@
+<div class="page">
+  <!-- Query not conform -->
+  <div *ngIf="conform==false">
+    <p>Query not conform</p>
+  </div>
+  <!-- Query not authorize-->
+  <div *ngIf="error==true">
+    <p>Access denied</p>
+  </div>
+  <div *ngIf="conform==true && error==false">
+    <p>Successfull connection</p>
+    <p>Scope authorized: {{scope}}</p>
+  </div>
+</div>
+
+

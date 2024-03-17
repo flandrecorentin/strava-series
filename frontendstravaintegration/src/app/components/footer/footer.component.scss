@@ -1,0 +1,21 @@
+#footer {
+  justify-content: space-around;
+  padding: 5px;
+}
+
+div {
+  background-color: var(--main-color-1);
+
+}
+
+.section {
+  text-align: center;
+  font-weight: bold;
+}
+#version{
+  font-size: 0.7rem;
+  padding: 0 0 5px 10px;
+  @media (max-width: 700px) {
+    font-size: 0.55rem;
+  }
+}

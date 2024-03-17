@@ -1,0 +1,17 @@
+<div id="header" class="container-flex-space-between">
+  <div>
+    <h1 routerLink="">{{title}}</h1>
+  </div>
+  <div>
+    <app-button [class]="classButtonHeader" [text]="series.title[internalService.getLanguage()]"
+                [redirectionUrl]="series.redirectionUrl"></app-button>
+    <app-button [class]="classButtonHeader" [text]="profile.title[internalService.getLanguage()]"
+                [redirectionUrl]="profile.redirectionUrl"></app-button>
+    <app-button [class]="classButtonHeader" [text]="connect.title[internalService.getLanguage()]"
+                [redirectionUrl]="connect.redirectionUrl" [type]="connect.type"></app-button>
+    <div class="language-container" class="container-flex-column">
+      <div class="language-item" (click)="handlerLanguage(this.language.code)"
+           *ngFor="let language of languages">{{language.code}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+// DEFAULT
+* {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.button-default {
+  cursor: pointer;
+}
+
+// HEADER
+.button-header {
+  cursor: pointer;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  text-align: center;
+  max-width: 80px;
+  @media (max-width: 700px) {
+    font-size: 0.7rem;
+  }
+}
+
+.button-header:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+// FOOTER
+.button-footer:hover {
+  text-decoration: underline;
+}
+
+.button-footer {
+  padding: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  @media (max-width: 700px) {
+    font-size: 0.6rem;
+  }
+}
