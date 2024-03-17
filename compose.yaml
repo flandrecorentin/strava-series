@@ -13,9 +13,6 @@ services:
     build: ./backendstravaintegration/
     ports:
       - "8000:8000"
-    volumes:
-      - /strava-series-env/secret_config_settings.py:/app/backendstravaintegration/secret_config_settings.py
-      - /strava-series-env/secret_config.py:/app/backendstrava/secret_config.py
     environment:
       ENV_CONFIG: "production"
       DEBUG: "True"
