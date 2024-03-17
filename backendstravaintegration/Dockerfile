@@ -9,8 +9,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
-COPY /strava-series-env/secret_config.py backendstrava/secret_config.py
-COPY /strava-series-env/secret_config_settings.py backendstravaintegration/secret_config_settings.py
 
 EXPOSE 8000
 RUN python manage.py migrate
