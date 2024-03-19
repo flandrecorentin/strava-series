@@ -4,11 +4,12 @@ import {Authentication} from "../interfaces/authentication";
 import {Profile} from "../interfaces/profile";
 import {Message} from "../interfaces/message";
 import {InternalService} from "./internal.service";
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class BackendStravaService {
 
-  backendstravaPathRewrite = '/apistrava/'
+  backendstravaPathRewrite = environment.apiUrlv1
   backendStravaVersion = this.backendstravaPathRewrite + 'version/'
   backendStravaTokenExchange = this.backendstravaPathRewrite + 'token-exchange/'
   backendStravaConfig = this.backendstravaPathRewrite + 'config/'

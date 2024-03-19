@@ -26,13 +26,18 @@ def index(request):
 
 def version(request):
     """Return the version of the strava-series app api"""
-    print("start")
     try:
-        message = Message(content='api v'+os.environ["VERSION"])
-        response = JsonResponse(message.to_json(), status=200)
+        message = Message(content='api v'+'ok')
+        response = JsonResponse(message.to_json(),
+            content_type="application/json",
+            headers={"Access-Control-Allow-Origin" : "http://localhost:4200"},
+            status=200)
     except:
         message = Message(content='api unavailable')
-        response = JsonResponse(message.to_json(), status=500)
+        response = JsonResponse(message.to_json(),
+            content_type="application/json",
+            headers={"Access-Control-Allow-Origin" : "http://localhost:4200"},
+            status=500)
     return response
 
 

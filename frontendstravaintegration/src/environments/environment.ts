@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   apiUrl: 'http://strava-series.flandrecorentin.com:8000',
-  apiUrlStrava: 'http://strava-series.flandrecorentin.com:8000/strava'
+  apiUrlv1: 'http://strava-series.flandrecorentin.com:8000/v1/'
 };

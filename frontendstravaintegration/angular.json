@@ -48,7 +48,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -56,7 +62,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -65,12 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "frontend-stravaintegration:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "frontend-stravaintegration:build:production"
             },
             "development": {
-              "browserTarget": "frontend-stravaintegration:build:development",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "frontend-stravaintegration:build:development"
             }
           },
           "defaultConfiguration": "development"

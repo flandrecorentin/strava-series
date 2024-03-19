@@ -6,7 +6,7 @@ WORKDIR app
 COPY . .
 
 RUN npm install
-RUN npm run build
+RUN npm run build --configuration=development
 
 # Stage 2: Serve the Angular app with Nginx
 FROM httpd:latest AS deploy
