@@ -43,9 +43,9 @@ backendstravaintegration/!.vscode/tasks.json
 backendstravaintegration/!.vscode/launch.json
 backendstravaintegration/!.vscode/extensions.json
 backendstravaintegration/backendstrava/devdata.py
-backendstravaintegration/backendstrava/secret_config.py
+backendstravaintegration/backendstrava/strava_series_config.py
 backendstravaintegration/backendstravaintegration.iml
-backendstravaintegration/backendstravaintegration/secret_config_settings.py
+backendstravaintegration/backendstravaintegration/strava_series_config.py
 backendstravaintegration/db.sqlite3
 backendstravaintegration/queries/
 backendstravaintegration/venv/*

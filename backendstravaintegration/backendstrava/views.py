@@ -11,7 +11,7 @@ from . import config
 from . import dblayout as db
 from . import devdata
 from . import models
-from . import secret_config
+from . import strava_series_config
 from . import serializers as s
 from . import utils
 from .object.message import Message
@@ -30,7 +30,7 @@ def version(request):
         message = Message(content='api v'+'ok')
         response = JsonResponse(message.to_json(),
             content_type="application/json",
-            headers={"Access-Control-Allow-Origin" : "http://localhost:4200"},
+            headers={"Access-Control-Allow-Origin" : strava_series_config.URL_FRONTEND},
             status=200)
     except:
         message = Message(content='api unavailable')
@@ -43,7 +43,7 @@ def version(request):
 
 def get_config(request):
     """Return the config for usage of Strava API"""
-    response = JsonResponse({"client_id": config.client_id, "redirect_uri": secret_config.redirect_uri,
+    response = JsonResponse({"client_id": config.client_id, "redirect_uri": strava_series_config.REDIRECT_URI,
                              "response_type": config.response_type, "scope": config.scope, "state": config.state})
     return response
 
